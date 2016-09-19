@@ -1,10 +1,10 @@
 #!/bin/bash
 
-TIMEOUT=$(grep "timeout=" ./config.ini | grep -o "[0-9]*")
+clear
 
 exec 2> /dev/null
 
-clear
+TIMEOUT=$(grep -o '[0-9][0-9]*' config.ini)
 
 echo "Weather in Minsk:"
 
